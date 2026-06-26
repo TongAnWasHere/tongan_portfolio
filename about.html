@@ -1,11 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Hor Tongan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        base: '#141414',
+                        surface: '#161616',
+                        line: '#222222',
+                        muted: '#444444',
+                        primary: '#f0eeea',
+                        sub: '#888888',
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
-<body>
-    
+
+<body class="bg-base text-primary font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <nav
+        class="sticky top-0 z-50 bg-base max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-line">
+        <a href="index.html" class="text-sm font-medium tracking-tight">Hor.Tongan</a>
+        <div class="flex gap-6 text-sm text-sub">
+            <a href="projects/index.html" class="hover:text-primary transition-colors duration-150">Projects</a>
+            <a href="about.html" class="text-primary">About</a>
+            <a href="index.html#contact" class="hover:text-primary transition-colors duration-150">Contact</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6">
+
+        <!-- Page Header -->
+        <section class="pt-16 pb-10 border-b border-line">
+            <p class="text-xs text-muted uppercase tracking-widest mb-4">About</p>
+            <h1 class="text-4xl font-medium">Hello! my name is Hor Tongan.</h1>
+        </section>
+
+        <!-- Image Section -->
+        <section class="py-10 border-b border-line">
+            <div class="relative flex items-center gap-4">
+
+                <!-- Prev Button -->
+                <button onclick="moveCarousel(-1)"
+                    class="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-line rounded-full text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                    ←
+                </button>
+
+                <!-- Image Window -->
+                <div class="flex-1 overflow-hidden rounded-lg">
+                    <div id="carousel-track" class="flex transition-transform duration-300 ease-in-out">
+
+                        <div class="w-full flex-shrink-0 h-96 bg-surface border border-line rounded-lg overflow-hidden flex items-center justify-center"
+                            style="scroll-snap-align: start;">
+                            <img src="" alt="Photo 1" class="w-full h-full object-cover" />
+                        </div>
+
+                        <div class="w-full flex-shrink-0 h-96 bg-surface border border-line rounded-lg overflow-hidden flex items-center justify-center"
+                            style="scroll-snap-align: start;">
+                            <img src="" alt="Photo 2" class="w-full h-full object-cover" />
+                        </div>
+
+                        <div class="w-full flex-shrink-0 h-96 bg-surface border border-line rounded-lg overflow-hidden flex items-center justify-center"
+                            style="scroll-snap-align: start;">
+                            <img src="" alt="Photo 3" class="w-full h-full object-cover" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Next Button -->
+                <button onclick="moveCarousel(1)"
+                    class="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-line rounded-full text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                    →
+                </button>
+
+            </div>
+
+            <div id="carousel-dots" class="flex justify-center gap-2 mt-5"></div>
+
+        </section>
+
+        <!-- Bio + Details -->
+        <section class="py-14 border-b border-line grid grid-cols-1 sm:grid-cols-3 gap-10">
+
+            <div class="sm:col-span-2 space-y-4 text-sm text-sub leading-loose">
+                <p>My name is Hor Tongan. I'm from Tboung Khmum Province. Currently majoring in IT at the University of
+                    Cambodia and studying a course at ISTAD.</p>
+                <p>I've loved technology ever since I was a child and I love trying and learning new things. I believe
+                    building is the best way to learn anything efficiently.</p>
+            </div>
+
+            <div>
+                <h2 class="text-sm font-medium mb-4">Details</h2>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between">
+                        <span class="text-muted">Name</span>
+                        <span class="text-sub">Hor Tongan</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Age</span>
+                        <span class="text-sub">19</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Location</span>
+                        <span class="text-sub">Phnom Penh, KH</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">School</span>
+                        <span class="text-sub">The University of Cambodia, ISTAD</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-muted">Currently</span>
+                        <span class="text-sub">Flip Decibel</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Skills Section -->
+        <section class="py-14 border-b border-line">
+            <p class="text-xs text-muted uppercase tracking-widest mb-8">Skills</p>
+
+            <div class="space-y-6 text-sm">
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                    <span class="text-muted">Languages</span>
+                    <span class="text-sub sm:col-span-3">C++, Java, Python</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                    <span class="text-muted">Mobile</span>
+                    <span class="text-sub sm:col-span-3">Android, OpenGL ES 2.0</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                    <span class="text-muted">Web</span>
+                    <span class="text-sub sm:col-span-3">HTML, CSS, Tailwind CSS, JavaScript</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                    <span class="text-muted">Tools</span>
+                    <span class="text-sub sm:col-span-3">Git, GitHub</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center border-t border-line">
+        <p class="text-xs text-muted">© 2026 Hor Tongan</p>
+        <p class="text-xs text-muted">Designed and built from scratch</p>
+    </footer>
+
+    <script>
+        const track = document.getElementById('carousel-track');
+        const dotsContainer = document.getElementById('carousel-dots');
+        const slides = track.children.length;
+        let current = 0;
+
+        function buildDots() {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < slides; i++) {
+                const dot = document.createElement('button');
+                dot.onclick = () => goTo(i);
+                dot.className = 'w-1.5 h-1.5 rounded-full transition-colors duration-150 ' +
+                    (i === current ? 'bg-sub' : 'bg-muted');
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function goTo(index) {
+            current = index;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            buildDots();
+        }
+
+        function moveCarousel(direction) {
+            const next = current + direction;
+            if (next < 0 || next >= slides) return;
+            goTo(next);
+        }
+
+        buildDots();
+    </script>
+
 </body>
+
 </html>
