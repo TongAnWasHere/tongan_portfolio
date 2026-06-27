@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Hor Tongan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        base: '#141414',
+                        surface: '#161616',
+                        line: '#222222',
+                        muted: '#444444',
+                        primary: '#f0eeea',
+                        sub: '#888888',
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-base text-primary font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <nav
+        class="sticky top-0 z-50 bg-base max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-line">
+        <a href="index.html" class="text-sm font-medium tracking-tight">Hor.Tongan</a>
+        <div class="flex gap-6 text-sm text-sub">
+            <a href="projects/index.html" class="hover:text-primary transition-colors duration-150">Projects</a>
+            <a href="about.html" class="hover:text-primary transition-colors duration-150">About</a>
+            <a href="index.html#contact" class="hover:text-primary transition-colors duration-150">Contact</a>
+            <a href="cv.html" class="text-primary">CV</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6">
+
+        <!-- Header + buttons -->
+        <section class="pt-16 pb-10 border-b border-line">
+            <p class="text-xs text-muted uppercase tracking-widest mb-4">CV</p>
+            <h1 class="text-4xl font-medium mb-2">Curriculum Vitae.</h1>
+            <p class="text-sm text-sub mb-8">The full document is below or download the PDF.</p>
+
+            <div class="flex gap-3">
+                <a href="assets/cv.pdf" download="HorTongan_CV.pdf"
+                    class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                    Download PDF ↓
+                </a>
+
+                <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer"
+                    class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                    Open in new tab ↗
+                </a>
+            </div>
+        </section>
+
+        <!-- CV preview -->
+        <section class="py-14 space-y-4">
+
+            <img src="assets/images/cv-page-1.jpg" alt="Hor Tongan CV page 1"
+                class="w-full rounded-lg border border-line" />
+
+        </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center border-t border-line">
+        <p class="text-xs text-muted">© 2026 Hor Tongan</p>
+        <p class="text-xs text-muted">Designed and built from scratch</p>
+    </footer>
+
+</body>
+
+</html>
