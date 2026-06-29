@@ -88,20 +88,58 @@
 
                 <button type="button"
                     class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 500px;">
-                    <img src="" alt="Flip Decibel Screenshot 1" class="h-auto w-full" />
+                    style="scroll-snap-align: start; width: 250px;">
+                    <video src="../assets/images/projects/flip_decibel/flip_decibel_showcase.mp4" controls playsinline
+                        tabindex="-1" preload="metadata" class="h-auto w-full"></video>
                 </button>
 
                 <button type="button"
                     class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 500px;">
-                    <img src="" alt="Flip Decibel Screenshot 2" class="h-auto w-full" />
+                    style="scroll-snap-align: start; width: 250px;">
+                    <img src="../assets/images/projects/flip_decibel/flip_decibel_starter_screen.jpg"
+                        alt="Flip Decibel Starter Screen" class="h-auto w-full" />
                 </button>
 
                 <button type="button"
                     class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 500px;">
-                    <img src="" alt="Flip Decibel Screenshot 3" class="h-auto w-full" />
+                    style="scroll-snap-align: start; width: 250px;">
+                    <img src="../assets/images/projects/flip_decibel/flip_decibel_settings.jpg"
+                        alt="Flip Decibel Settings" class="h-auto w-full" />
+                </button>
+
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 250px;">
+                    <img src="../assets/images/projects/flip_decibel/flip_decibel_settings2.jpg"
+                        alt="Flip Decibel Settings 2" class="h-auto w-full" />
+                </button>
+
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 250px;">
+                    <img src="../assets/images/projects/flip_decibel/flip_decibel_heads.jpg" alt="Flip Decibel Heads"
+                        class="h-auto w-full" />
+                </button>
+
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 250px;">
+                    <img src="../assets/images/projects/flip_decibel/flip_decibel_dog.jpg" alt="Flip Decibel Dog Skin"
+                        class="h-auto w-full" />
+                </button>
+
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 250px;">
+                    <img src="../assets/images/projects/flip_decibel/flip_decibel_cat.jpg" alt="Flip Decibel Cat Skin"
+                        class="h-auto w-full" />
+                </button>
+
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 250px;">
+                    <img src="../assets/images/projects/flip_decibel/flip_decibel_altered_text.jpg"
+                        alt="Flip Decibel Altered Text Skin" class="h-auto w-full" />
                 </button>
 
             </div>
@@ -120,8 +158,8 @@
                         Mode is enabled, then any flip above 50% volume will always land heads and any flip below will
                         always land tails, giving the user silent control over every flip. Additionally, the coin can be
                         individually customized on each side with a skin system including, but not limited to, text
-                        labels and animal skins such as dog, cat, monkey, bear, duck and chicken (more incoming). All
-                        the settings and preferences are stored locally using SharedPreferences.</p>
+                        labels, custom images and animal skins such as dog, cat, monkey, bear, duck and chicken (more
+                        incoming). All the settings and preferences are stored locally using SharedPreferences.</p>
                     <p>Flip Decibel was developed solo over a period of two months, and was the first Android
                         application I have ever developed with no experience in Android development or OpenGL ES.</p>
                 </div>
@@ -143,11 +181,9 @@
                         <span class="text-sub">Finished</span>
                     </div>
                     <div class="flex justify-between">
-                        <span class="text-muted">GitHub</span>
-                        <a href="https://github.com/TongAnWasHere/flip_decibel" target="_blank"
-                            rel="noopener noreferrer"
-                            class="inline-flex items-center gap-1 text-sub underline underline-offset-4 decoration-sub hover:text-primary hover:decoration-primary transition-colors duration-150">repo
-                            ↗</a>
+                        <span class="text-muted">Play Store</span>
+                        <p class="inline-flex items-center gap-1 text-sub decoration-sub hover:text-primary hover:decoration-primary transition-colors duration-150">
+                            Coming soon!</p>
                     </div>
                 </div>
             </div>
@@ -200,9 +236,14 @@
         const viewerLabel = document.getElementById('viewer-label');
         const galleryButtons = document.querySelectorAll('#media-gallery button');
         const mediaItems = [
-            { type: 'image', src: '', label: 'Flip Decibel Screenshot 1' },
-            { type: 'image', src: '', label: 'Flip Decibel Screenshot 2' },
-            { type: 'image', src: '', label: 'Flip Decibel Screenshot 3' },
+            { type: 'video', src: '../assets/images/projects/flip_decibel/flip_decibel_showcase.mp4', label: 'Flip Decibel Showcase Video' },
+            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_starter_screen.jpg', label: 'Flip Decibel Starter Screen' },
+            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_settings.jpg', label: 'Flip Decibel Settings' },
+            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_settings2.jpg', label: 'Flip Decibel Settings 2' },
+            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_heads.jpg', label: 'Flip Decibel Heads' },
+            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_dog.jpg', label: 'Flip Decibel Dog Skin' },
+            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_cat.jpg', label: 'Flip Decibel Cat Skin' },
+            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_altered_text.jpg', label: 'Flip Decibel Altered Text Skin' },
         ];
         let activeMediaIndex = 0;
         let lastFocusedTrigger = null;
