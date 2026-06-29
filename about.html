@@ -27,6 +27,20 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <style>
+        .screenshot-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .screenshot-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .media-viewer[hidden] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="bg-base text-primary font-sans antialiased">
@@ -53,43 +67,41 @@
 
         <!-- Image Section -->
         <section class="py-10 border-b border-line">
-            <div class="relative flex items-center gap-4">
+            <div id="media-gallery" class="screenshot-scroll flex gap-4 overflow-x-auto scroll-smooth"
+                style="scroll-snap-type: x mandatory;">
 
-                <!-- Prev button -->
-                <button onclick="moveCarousel(-1)"
-                    class="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-line rounded-full text-sub hover:text-primary hover:border-muted transition-colors duration-150">
-                    ←
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 500px;">
+                    <img src="assets/images/about/ISTAD_exam.jpg" alt="ISTAD Exam" class="h-auto w-full" />
                 </button>
 
-                <!-- Image window -->
-                <div class="flex-1 overflow-hidden rounded-lg">
-                    <div id="carousel-track" class="flex transition-transform duration-300 ease-in-out">
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 500px;">
+                    <img src="assets/images/about/ISTAD_top.jpg" alt="ISTAD Top Student" class="h-auto w-full" />
+                </button>
 
-                        <div class="w-full flex-shrink-0 bg-surface border border-line rounded-lg overflow-hidden">
-                            <img src="" alt="Photo" class="w-full h-auto" />
-                        </div>
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 500px;">
+                    <img src="assets/images/about/ISTAD_group.jpg" alt="ISTAD Group Photo" class="h-auto w-full" />
+                </button>
 
-                        <div class="w-full flex-shrink-0 bg-surface border border-line rounded-lg overflow-hidden">
-                            <img src="" alt="Photo" class="w-full h-auto" />
-                        </div>
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 500px;">
+                    <img src="assets/images/about/ISTAD_cook.jpg" alt="ISTAD Cooking Activity" class="h-auto w-full" />
+                </button>
 
-                        <div class="w-full flex-shrink-0 bg-surface border border-line rounded-lg overflow-hidden">
-                            <img src="" alt="Photo" class="w-full h-auto" />
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Next button -->
-                <button onclick="moveCarousel(1)"
-                    class="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-line rounded-full text-sub hover:text-primary hover:border-muted transition-colors duration-150">
-                    →
+                <button type="button"
+                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
+                    style="scroll-snap-align: start; width: 500px;">
+                    <img src="assets/images/about/UC_scholarship.jpg" alt="University of Cambodia Scholarship"
+                        class="h-auto w-full" />
                 </button>
 
             </div>
-
-            <div id="carousel-dots" class="flex justify-center gap-2 mt-5"></div>
-
         </section>
 
         <!-- Bio + Details -->
@@ -103,7 +115,8 @@
                     supportive of everything I do.</p>
                 <p>I'm in my second year majoring in Information Technology at the University of Cambodia. I'm also
                     currently pursuing a course at ISTAD for extra experience. My technical skills include C++, Java,
-                    Python, HTML, CSS, and Tailwind CSS. Outside of school, I taught English at a private school for a
+                    Python, HTML, CSS, Tailwind CSS and Javascript. Outside of school, I taught English at a private
+                    school for a
                     year, completed a library internship at the University of Cambodia, and did six months of freelance
                     work covering social media, research, and blog writing.</p>
                 <p>I'm open to any field with no hard limitations. The current goal right now is to land a good role and
@@ -169,40 +182,135 @@
 
     </main>
 
+    <div id="media-viewer" class="media-viewer fixed inset-0 z-50 px-6 py-8 sm:px-10 sm:py-10" tabindex="-1"
+        style="background-color: rgba(0, 0, 0, 0.85);" hidden>
+        <button type="button" id="viewer-close"
+            class="absolute right-5 top-5 z-20 h-11 w-11 text-lg text-primary hover:text-white transition-colors duration-150">
+            x
+        </button>
+
+        <button type="button" id="viewer-prev"
+            class="absolute left-5 top-1/2 z-20 h-11 w-11 -translate-y-1/2 text-2xl text-primary hover:text-white transition-colors duration-150">
+            ←
+        </button>
+
+        <button type="button" id="viewer-next"
+            class="absolute right-5 top-1/2 z-20 h-11 w-11 -translate-y-1/2 text-2xl text-primary hover:text-white transition-colors duration-150">
+            →
+        </button>
+
+        <div class="mx-auto flex h-full max-w-6xl items-center justify-center">
+            <div class="relative flex w-full flex-col items-center justify-center">
+                <div id="viewer-frame" class="flex min-h-[320px] w-full items-center justify-center overflow-hidden">
+                </div>
+                <p id="viewer-label" class="mt-4 text-center text-sm text-primary">
+                </p>
+            </div>
+        </div>
+    </div>
+
     <footer class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center border-t border-line">
         <p class="text-xs text-muted">© 2026 Hor Tongan</p>
         <p class="text-xs text-muted">Designed and built from scratch</p>
     </footer>
 
     <script>
-        const track = document.getElementById('carousel-track');
-        const dotsContainer = document.getElementById('carousel-dots');
-        const slides = track.children.length;
-        let current = 0;
+        const mediaViewer = document.getElementById('media-viewer');
+        const viewerFrame = document.getElementById('viewer-frame');
+        const viewerLabel = document.getElementById('viewer-label');
+        const galleryButtons = document.querySelectorAll('#media-gallery button');
+        const mediaItems = [
+            { type: 'image', src: 'assets/images/about/ISTAD_exam.jpg', label: 'ISTAD Exam' },
+            { type: 'image', src: 'assets/images/about/ISTAD_top.jpg', label: 'ISTAD Top Student' },
+            { type: 'image', src: 'assets/images/about/ISTAD_group.jpg', label: 'ISTAD Group Photo' },
+            { type: 'image', src: 'assets/images/about/ISTAD_cook.jpg', label: 'ISTAD Cooking Activity' },
+            { type: 'image', src: 'assets/images/about/UC_scholarship.jpg', label: 'University of Cambodia Scholarship' },
+        ];
+        let activeMediaIndex = 0;
+        let lastFocusedTrigger = null;
 
-        function buildDots() {
-            dotsContainer.innerHTML = '';
-            for (let i = 0; i < slides; i++) {
-                const dot = document.createElement('button');
-                dot.onclick = () => goTo(i);
-                dot.className = 'w-1.5 h-1.5 rounded-full transition-colors duration-150 ' +
-                    (i === current ? 'bg-sub' : 'bg-muted');
-                dotsContainer.appendChild(dot);
+        function renderViewer(index) {
+            const item = mediaItems[index];
+            const type = item.type;
+            const src = item.src;
+            const label = item.label;
+
+            activeMediaIndex = index;
+            viewerFrame.innerHTML = '';
+            viewerLabel.textContent = label;
+
+            if (type === 'video') {
+                const video = document.createElement('video');
+                video.src = src;
+                video.controls = true;
+                video.playsInline = true;
+                video.preload = 'metadata';
+                video.className = 'max-h-[86vh] w-full max-w-full rounded-lg';
+                viewerFrame.appendChild(video);
+                return;
+            }
+
+            const image = document.createElement('img');
+            image.src = src;
+            image.alt = label;
+            image.className = 'max-h-[86vh] w-auto max-w-full rounded-lg';
+            viewerFrame.appendChild(image);
+        }
+
+        function openViewerAt(index) {
+            lastFocusedTrigger = document.activeElement;
+            renderViewer(index);
+            mediaViewer.hidden = false;
+            document.body.classList.add('overflow-hidden');
+            mediaViewer.focus();
+        }
+
+        function closeViewer() {
+            mediaViewer.hidden = true;
+            viewerFrame.innerHTML = '';
+            document.body.classList.remove('overflow-hidden');
+            if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
+                lastFocusedTrigger.focus();
             }
         }
 
-        function goTo(index) {
-            current = index;
-            track.style.transform = `translateX(-${current * 100}%)`;
-            buildDots();
+        function moveViewer(direction) {
+            const total = mediaItems.length;
+            const nextIndex = (activeMediaIndex + direction + total) % total;
+            renderViewer(nextIndex);
         }
 
-        function moveCarousel(direction) {
-            const next = (current + direction + slides) % slides;
-            goTo(next);
-        }
+        galleryButtons.forEach((button, index) => {
+            button.addEventListener('click', () => openViewerAt(index));
+            button.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+                    event.preventDefault();
+                    openViewerAt(index);
+                }
+            });
+        });
 
-        buildDots();
+        document.getElementById('viewer-close').addEventListener('click', closeViewer);
+        document.getElementById('viewer-prev').addEventListener('click', () => moveViewer(-1));
+        document.getElementById('viewer-next').addEventListener('click', () => moveViewer(1));
+
+        mediaViewer.addEventListener('click', (event) => {
+            if (event.target === mediaViewer) {
+                closeViewer();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (mediaViewer.hidden) return;
+
+            if (event.key === 'Escape') closeViewer();
+            if (event.key === 'ArrowLeft') moveViewer(-1);
+            if (event.key === 'ArrowRight') moveViewer(1);
+            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+                event.preventDefault();
+                moveViewer(1);
+            }
+        });
     </script>
 
 </body>
