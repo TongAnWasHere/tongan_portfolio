@@ -1,25 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flip Decibel - Hor Tongan</title>
+    <meta name="description" content="Flip Decibel, a rigged Android coin-flip app." />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --color-base: #f8f7f4;
+            --color-surface: #f0eeea;
+            --color-line: #e0deda;
+            --color-muted: #7f7d76;
+            --color-primary: #141414;
+            --color-sub: #6b6a65;
+        }
+        .dark {
+            --color-base: #141414;
+            --color-surface: #161616;
+            --color-line: #222222;
+            --color-muted: #777777;
+            --color-primary: #f0eeea;
+            --color-sub: #888888;
+        }
+    </style>
+    <script>
+        const saved = localStorage.getItem("theme");
+        if (saved === "light") document.documentElement.classList.remove("dark");
+        else document.documentElement.classList.add("dark");
+    </script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ["Inter", "sans-serif"],
                     },
                     colors: {
-                        base: '#141414',
-                        surface: '#161616',
-                        line: '#222222',
-                        muted: '#444444',
-                        primary: '#f0eeea',
-                        sub: '#888888',
+                        base: "var(--color-base)",
+                        surface: "var(--color-surface)",
+                        line: "var(--color-line)",
+                        muted: "var(--color-muted)",
+                        primary: "var(--color-primary)",
+                        sub: "var(--color-sub)",
                     },
                 },
             },
@@ -46,21 +70,33 @@
 <body class="bg-base text-primary font-sans antialiased">
 
     <!-- Navigation Bar -->
-    <nav
-        class="sticky top-0 z-50 bg-base max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-line">
-        <a href="../index.html" class="text-sm font-medium tracking-tight">Hor.Tongan</a>
+    <nav class="sticky top-0 z-50 bg-base max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-line">
         <div class="flex gap-6 text-sm text-sub">
+            <a href="../index.html" class="hover:text-primary transition-colors duration-150">Home</a>
             <a href="index.html" class="text-primary">Projects</a>
             <a href="../about.html" class="hover:text-primary transition-colors duration-150">About</a>
-            <a href="../index.html#contact" class="hover:text-primary transition-colors duration-150">Contact</a>
             <a href="../cv.html" class="hover:text-primary transition-colors duration-150">CV</a>
+        </div>
+        <div class="flex items-center gap-4 text-sub">
+            <a href="https://t.me/tonganwashere" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors duration-150" aria-label="Telegram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </a>
+            <a href="https://facebook.com/TongAnWasHere" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors duration-150" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://github.com/TongAnWasHere" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors duration-150" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+            <button id="theme-toggle" class="hover:text-primary transition-colors duration-150" aria-label="Toggle theme">
+                <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between py-8 border-b border-line">
-            <a href="index.html" class="text-sm text-sub hover:text-primary transition-colors duration-150">↗ All
-                projects</a>
+            <a href="index.html" class="text-sm text-sub hover:text-primary transition-colors duration-150">↗ All projects</a>
             <div class="flex gap-4 text-sm text-sub">
                 <a href="wordlepp.html" class="hover:text-primary transition-colors duration-150">← Prev</a>
                 <span class="opacity-30 cursor-not-allowed">Next →</span>
@@ -69,10 +105,9 @@
 
         <!-- Project Header -->
         <section class="pt-14 pb-10 border-b border-line">
-            <p class="text-xs text-muted uppercase tracking-widest mb-4">Project</p>
             <h1 class="text-4xl font-medium mb-4">Flip Decibel</h1>
-            <p class="text-base text-sub leading-relaxed max-w-xl mb-6">Android coin-flip app with 3D OpenGL ES
-                rendering and a hidden volume-based rigging mechanic.</p>
+            <p class="text-base text-sub leading-relaxed max-w-xl mb-6">Android coin-flip app with 3D OpenGL ES rendering
+                and a hidden volume-based rigging mechanic.</p>
             <div class="flex flex-wrap gap-2">
                 <span class="text-xs text-muted border border-line rounded-full px-3 py-1">Java</span>
                 <span class="text-xs text-muted border border-line rounded-full px-3 py-1">Android</span>
@@ -89,8 +124,9 @@
                 <button type="button"
                     class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
                     style="scroll-snap-align: start; width: 250px;">
-                    <video src="../assets/images/projects/flip_decibel/flip_decibel_showcase.mp4" controls playsinline
-                        tabindex="-1" preload="metadata" class="h-auto w-full"></video>
+                    <video src="../assets/images/projects/flip_decibel/flip_decibel_showcase.mp4"
+                        aria-label="Flip Decibel showcase video" playsinline tabindex="-1" preload="metadata"
+                        class="h-auto w-full"></video>
                 </button>
 
                 <button type="button"
@@ -148,13 +184,13 @@
         <!-- Project Details -->
         <section class="py-10 border-b border-line grid grid-cols-1 sm:grid-cols-3 gap-10">
             <div class="sm:col-span-2">
-                <h2 class="text-sm font-medium mb-4">About the project</h2>
+                <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">About the project</p>
                 <div class="text-sm text-sub leading-loose space-y-4">
                     <p>Flip Decibel is a customizable coin flipper app for Android. It's built in Java using Android
                         Studio. The coin is rendered in 3D with OpenGL ES 2.0 and has a smooth flip animation that can
                         be adjusted with the animation speed slider. It's a simple app that flips a coin, but is also a
                         hidden pranking tool.</p>
-                    <p>The app features a Rig Mode that links the coin's result to the volume level of the phone. If Rig
+                    <p>The app features a Rig Mode that links the coin result to the volume level of the phone. If Rig
                         Mode is enabled, then any flip above 50% volume will always land heads and any flip below will
                         always land tails, giving the user silent control over every flip. Additionally, the coin can be
                         individually customized on each side with a skin system including, but not limited to, text
@@ -166,7 +202,7 @@
             </div>
 
             <div>
-                <h2 class="text-sm font-medium mb-4">Details</h2>
+                <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">Details</p>
                 <div class="space-y-3 text-sm">
                     <div class="flex justify-between">
                         <span class="text-muted">Year</span>
@@ -191,8 +227,7 @@
 
         <!-- Bottom prev/next -->
         <div class="flex items-center justify-between py-8">
-            <a href="wordlepp.html" class="text-sm text-sub hover:text-primary transition-colors duration-150">←
-                Prev</a>
+            <a href="wordlepp.html" class="text-sm text-sub hover:text-primary transition-colors duration-150">← Prev</a>
             <span class="text-sm text-sub opacity-30 cursor-not-allowed">Next →</span>
         </div>
 
@@ -230,107 +265,8 @@
         <p class="text-xs text-muted">Designed and built from scratch</p>
     </footer>
 
-    <script>
-        const mediaViewer = document.getElementById('media-viewer');
-        const viewerFrame = document.getElementById('viewer-frame');
-        const viewerLabel = document.getElementById('viewer-label');
-        const galleryButtons = document.querySelectorAll('#media-gallery button');
-        const mediaItems = [
-            { type: 'video', src: '../assets/images/projects/flip_decibel/flip_decibel_showcase.mp4', label: 'Flip Decibel Showcase Video' },
-            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_starter_screen.jpg', label: 'Flip Decibel Starter Screen' },
-            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_settings.jpg', label: 'Flip Decibel Settings' },
-            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_settings2.jpg', label: 'Flip Decibel Settings 2' },
-            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_heads.jpg', label: 'Flip Decibel Heads' },
-            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_dog.jpg', label: 'Flip Decibel Dog Skin' },
-            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_cat.jpg', label: 'Flip Decibel Cat Skin' },
-            { type: 'image', src: '../assets/images/projects/flip_decibel/flip_decibel_altered_text.jpg', label: 'Flip Decibel Altered Text Skin' },
-        ];
-        let activeMediaIndex = 0;
-        let lastFocusedTrigger = null;
-
-        function renderViewer(index) {
-            const item = mediaItems[index];
-            const type = item.type;
-            const src = item.src;
-            const label = item.label;
-
-            activeMediaIndex = index;
-            viewerFrame.innerHTML = '';
-            viewerLabel.textContent = label;
-
-            if (type === 'video') {
-                const video = document.createElement('video');
-                video.src = src;
-                video.controls = true;
-                video.playsInline = true;
-                video.preload = 'metadata';
-                video.className = 'max-h-[86vh] w-full max-w-full rounded-lg';
-                viewerFrame.appendChild(video);
-                return;
-            }
-
-            const image = document.createElement('img');
-            image.src = src;
-            image.alt = label;
-            image.className = 'max-h-[86vh] w-auto max-w-full rounded-lg';
-            viewerFrame.appendChild(image);
-        }
-
-        function openViewerAt(index) {
-            lastFocusedTrigger = document.activeElement;
-            renderViewer(index);
-            mediaViewer.hidden = false;
-            document.body.classList.add('overflow-hidden');
-            mediaViewer.focus();
-        }
-
-        function closeViewer() {
-            mediaViewer.hidden = true;
-            viewerFrame.innerHTML = '';
-            document.body.classList.remove('overflow-hidden');
-            if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
-                lastFocusedTrigger.focus();
-            }
-        }
-
-        function moveViewer(direction) {
-            const total = mediaItems.length;
-            const nextIndex = (activeMediaIndex + direction + total) % total;
-            renderViewer(nextIndex);
-        }
-
-        galleryButtons.forEach((button, index) => {
-            button.addEventListener('click', () => openViewerAt(index));
-            button.addEventListener('keydown', (event) => {
-                if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
-                    event.preventDefault();
-                    openViewerAt(index);
-                }
-            });
-        });
-
-        document.getElementById('viewer-close').addEventListener('click', closeViewer);
-        document.getElementById('viewer-prev').addEventListener('click', () => moveViewer(-1));
-        document.getElementById('viewer-next').addEventListener('click', () => moveViewer(1));
-
-        mediaViewer.addEventListener('click', (event) => {
-            if (event.target === mediaViewer) {
-                closeViewer();
-            }
-        });
-
-        document.addEventListener('keydown', (event) => {
-            if (mediaViewer.hidden) return;
-
-            if (event.key === 'Escape') closeViewer();
-            if (event.key === 'ArrowLeft') moveViewer(-1);
-            if (event.key === 'ArrowRight') moveViewer(1);
-            if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
-                event.preventDefault();
-                moveViewer(1);
-            }
-        });
-    </script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/media-viewer.js"></script>
 
 </body>
 
