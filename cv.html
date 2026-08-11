@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV - Hor Tongan</title>
     <meta name="description" content="View and download my curriculum vitae." />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
@@ -53,10 +57,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 
-<body class="bg-base text-primary font-sans antialiased">
+<body class="bg-base text-primary font-sans antialiased min-h-screen flex flex-col">
 
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-base max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-line">
+    <nav class="sticky top-0 z-50 bg-base max-w-7xl mx-auto w-full px-6 py-5 flex items-center justify-between border-b border-line">
         <div class="flex gap-6 text-sm text-sub">
             <a href="index.html" class="hover:text-primary transition-colors duration-150">Home</a>
             <a href="projects/index.html" class="hover:text-primary transition-colors duration-150">Projects</a>
@@ -80,7 +84,7 @@
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6">
+    <main class="max-w-7xl mx-auto w-full px-6 flex-1">
 
         <!-- Header + buttons -->
         <section class="pt-16 pb-10 border-b border-line">
@@ -93,7 +97,7 @@
 
                 <a href="assets/Hor_Tongan_CV.pdf" target="_blank" rel="noopener noreferrer"
                     class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
-                    Open in new tab ↗
+                    Open in new tab →
                 </a>
             </div>
         </section>
@@ -108,7 +112,7 @@
 
     </main>
 
-    <footer class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center border-t border-line">
+    <footer class="max-w-7xl mx-auto w-full px-6 py-6 flex justify-between items-center border-t border-line">
         <p class="text-xs text-muted">© 2026 Hor Tongan</p>
         <p class="text-xs text-muted">Designed and built from scratch</p>
     </footer>

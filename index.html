@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hor Tongan</title>
     <meta name="description" content="My personal portfolio website showcasing projects, skills, and contact information." />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
@@ -53,10 +57,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 
-<body class="bg-base text-primary font-sans antialiased">
+<body class="bg-base text-primary font-sans antialiased min-h-screen flex flex-col">
 
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-base max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-line">
+    <nav class="sticky top-0 z-50 bg-base max-w-7xl mx-auto w-full px-6 py-5 flex items-center justify-between border-b border-line">
         <div class="flex gap-6 text-sm text-sub">
             <a href="index.html" class="text-primary">Home</a>
             <a href="projects/index.html" class="hover:text-primary transition-colors duration-150">Projects</a>
@@ -80,78 +84,80 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-6 pt-20 pb-16 border-b border-line">
-        <h1 class="text-4xl sm:text-5xl font-medium leading-snug mb-8">
-            Hor Tongan
-        </h1>
-        <p class="text-base text-sub leading-relaxed max-w-md mb-6">
-            Hello! I am Tongan, a student at The University of Cambodia and ISTAD who builds apps, websites, games, and anything interesting to learn next.
-        </p>
-    </section>
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 pt-20 pb-16 border-b border-line">
+            <h1 class="text-4xl sm:text-5xl font-medium leading-snug mb-8">
+                Hor Tongan
+            </h1>
+            <p class="text-base text-sub leading-relaxed max-w-md mb-6">
+                Hello! I am Tongan, a student at The University of Cambodia and ISTAD who builds apps, websites, games, and anything interesting to learn next.
+            </p>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="max-w-7xl mx-auto px-6 py-14">
-        <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">Top Projects</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Projects Section -->
+        <section class="max-w-7xl mx-auto px-6 py-14">
+            <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">Top Projects</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-            <!-- Wordle++ Card -->
-            <a href="projects/wordlepp.html"
-                class="group block border border-line rounded-lg overflow-hidden hover:border-muted transition-colors duration-150">
-                <div class="w-full bg-surface border-b border-line">
-                    <img src="assets/images/projects/wordlepp/wordlepp_guest_menu.png" alt="Wordle++ screenshot"
-                        class="w-full h-auto" />
-                </div>
-                <div class="p-4">
-                    <h2 class="text-base font-medium mb-2 text-sub group-hover:transition-colors duration-150">
-                        Wordle++
-                    </h2>
-                    <p class="text-sm text-sub leading-relaxed mb-3">
-                        Terminal-based Wordle clone with user accounts, leaderboards, and multiple game modes.
-                    </p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">C++</span>
-                        <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">FTXUI</span>
-                        <span
-                            class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">nlohmann/json</span>
+                <!-- Wordle++ Card -->
+                <a href="projects/wordlepp.html"
+                    class="group block border border-line rounded-lg overflow-hidden hover:border-muted transition-colors duration-150">
+                    <div class="w-full bg-surface border-b border-line">
+                        <img src="assets/images/projects/wordlepp/wordlepp_guest_menu.png" alt="Wordle++ screenshot"
+                            class="w-full h-auto" />
                     </div>
-                </div>
-            </a>
-
-            <!-- Flip Decibel Card -->
-            <a href="projects/flip_decibel.html"
-                class="group block border border-line rounded-lg overflow-hidden hover:border-muted transition-colors duration-150">
-                <div
-                    class="w-full aspect-video bg-surface border-b border-line overflow-hidden flex items-center justify-center">
-                    <img src="assets/images/projects/flip_decibel/flip_decibel_starter_screen.jpg"
-                        alt="Flip Decibel screenshot" class="h-full w-auto max-w-none shrink-0" />
-                </div>
-                <div class="p-4">
-                    <h2 class="text-base font-medium mb-2 text-sub group-hover:transition-colors duration-150">
-                        Flip Decibel
-                    </h2>
-                    <p class="text-sm text-sub leading-relaxed mb-3">
-                        Android coin-flip app with 3D OpenGL ES rendering and a hidden volume-based rigging
-                        mechanic.
-                    </p>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">Java</span>
-                        <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">Android</span>
-                        <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">OpenGL ES 2.0</span>
+                    <div class="p-4">
+                        <h2 class="text-base font-medium mb-2 text-sub group-hover:transition-colors duration-150">
+                            Wordle++
+                        </h2>
+                        <p class="text-sm text-sub leading-relaxed mb-3">
+                            Terminal-based Wordle clone with user accounts, leaderboards, and multiple game modes.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">C++</span>
+                            <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">FTXUI</span>
+                            <span
+                                class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">nlohmann/json</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
 
-        <div class="mt-6">
-            <a href="projects/index.html" class="text-xs text-sub hover:text-primary transition-colors duration-150">
-                All projects →
-            </a>
-        </div>
-    </section>
+                <!-- Flip Decibel Card -->
+                <a href="projects/flip_decibel.html"
+                    class="group block border border-line rounded-lg overflow-hidden hover:border-muted transition-colors duration-150">
+                    <div
+                        class="w-full aspect-video bg-surface border-b border-line overflow-hidden flex items-center justify-center">
+                        <img src="assets/images/projects/flip_decibel/flip_decibel_starter_screen.jpg"
+                            alt="Flip Decibel screenshot" class="h-full w-auto max-w-none shrink-0" />
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-base font-medium mb-2 text-sub group-hover:transition-colors duration-150">
+                            Flip Decibel
+                        </h2>
+                        <p class="text-sm text-sub leading-relaxed mb-3">
+                            Android coin-flip app with 3D OpenGL ES rendering and a hidden volume-based rigging
+                            mechanic.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">Java</span>
+                            <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">Android</span>
+                            <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">OpenGL ES 2.0</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-6">
+                <a href="projects/index.html" class="text-xs text-sub hover:text-primary transition-colors duration-150">
+                    All projects →
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center border-t border-line">
+    <footer class="max-w-7xl mx-auto w-full px-6 py-6 flex justify-between items-center border-t border-line">
         <p class="text-xs text-muted">© 2026 Hor Tongan</p>
         <p class="text-xs text-muted">Designed and built from scratch</p>
     </footer>
