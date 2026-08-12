@@ -68,6 +68,12 @@
         .media-viewer[hidden] {
             display: none;
         }
+
+        .project-gallery-item {
+            scroll-snap-align: start;
+            width: 250px;
+            height: 510px;
+        }
     </style>
 </head>
 
@@ -107,7 +113,7 @@
             </div>
             <div class="flex gap-4 text-sm text-sub">
                 <a href="wordlepp.html" class="hover:text-primary transition-colors duration-150">← Prev</a>
-                <span class="opacity-30 cursor-not-allowed">Next →</span>
+                <a href="pydfile.html" class="hover:text-primary transition-colors duration-150">Next →</a>
             </div>
         </div>
 
@@ -130,60 +136,52 @@
                 style="scroll-snap-type: x mandatory;">
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 250px;">
+                    class="project-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <video src="../assets/images/projects/flip_decibel/flip_decibel_showcase.mp4"
                         aria-label="Flip Decibel showcase video" playsinline tabindex="-1" preload="metadata"
-                        class="h-auto w-full"></video>
+                        class="h-full w-full object-cover"></video>
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 250px;">
+                    class="project-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <img src="../assets/images/projects/flip_decibel/flip_decibel_starter_screen.jpg"
-                        alt="Flip Decibel Starter Screen" class="h-auto w-full" />
+                        alt="Flip Decibel Starter Screen" class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 250px;">
+                    class="project-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <img src="../assets/images/projects/flip_decibel/flip_decibel_settings.jpg"
-                        alt="Flip Decibel Settings" class="h-auto w-full" />
+                        alt="Flip Decibel Settings" class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 250px;">
+                    class="project-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <img src="../assets/images/projects/flip_decibel/flip_decibel_settings2.jpg"
-                        alt="Flip Decibel Settings 2" class="h-auto w-full" />
+                        alt="Flip Decibel Settings 2" class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 250px;">
+                    class="project-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <img src="../assets/images/projects/flip_decibel/flip_decibel_heads.jpg" alt="Flip Decibel Heads"
-                        class="h-auto w-full" />
+                        class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 250px;">
+                    class="project-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <img src="../assets/images/projects/flip_decibel/flip_decibel_dog.jpg" alt="Flip Decibel Dog Skin"
-                        class="h-auto w-full" />
+                        class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 250px;">
+                    class="project-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <img src="../assets/images/projects/flip_decibel/flip_decibel_cat.jpg" alt="Flip Decibel Cat Skin"
-                        class="h-auto w-full" />
+                        class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 250px;">
+                    class="project-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <img src="../assets/images/projects/flip_decibel/flip_decibel_altered_text.jpg"
-                        alt="Flip Decibel Altered Text Skin" class="h-auto w-full" />
+                        alt="Flip Decibel Altered Text Skin" class="h-full w-full object-cover" />
                 </button>
 
             </div>
@@ -236,7 +234,7 @@
         <!-- Bottom prev/next -->
         <div class="flex items-center justify-between py-8">
             <a href="wordlepp.html" class="text-sm text-sub hover:text-primary transition-colors duration-150">← Prev</a>
-            <span class="text-sm text-sub opacity-30 cursor-not-allowed">Next →</span>
+            <a href="pydfile.html" class="text-sm text-sub hover:text-primary transition-colors duration-150">Next →</a>
         </div>
 
     </main>

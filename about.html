@@ -68,6 +68,12 @@
         .media-viewer[hidden] {
             display: none;
         }
+
+        .about-gallery-item {
+            scroll-snap-align: start;
+            width: 500px;
+            height: 320px;
+        }
     </style>
 </head>
 
@@ -111,34 +117,34 @@
                 style="scroll-snap-type: x mandatory;">
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 500px;">
-                    <img src="assets/images/about/ISTAD_exam.jpg" alt="ISTAD Exam" class="h-auto w-full" />
+                    class="about-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
+                    <img src="assets/images/about/ISTAD_exam.jpg" alt="ISTAD Exam" class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 500px;">
-                    <img src="assets/images/about/ISTAD_top.jpg" alt="ISTAD Top Student" class="h-auto w-full" />
+                    class="about-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
+                    <img src="assets/images/about/ISTAD_top.jpg" alt="ISTAD Top Student" class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 500px;">
-                    <img src="assets/images/about/ISTAD_group.jpg" alt="ISTAD Group Photo" class="h-auto w-full" />
+                    class="about-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
+                    <img src="assets/images/about/ISTAD_group.jpg" alt="ISTAD Group Photo" class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 500px;">
-                    <img src="assets/images/about/ISTAD_cook.jpg" alt="ISTAD Cooking Activity" class="h-auto w-full" />
+                    class="about-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
+                    <img src="assets/images/about/ISTAD_interview.jpg" alt="ISTAD Interview" class="h-full w-full object-cover" />
                 </button>
 
                 <button type="button"
-                    class="flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer"
-                    style="scroll-snap-align: start; width: 500px;">
+                    class="about-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
+                    <img src="assets/images/about/ISTAD_cook.jpg" alt="ISTAD Cooking Activity" class="h-full w-full object-cover" />
+                </button>
+
+                <button type="button"
+                    class="about-gallery-item flex-shrink-0 rounded-lg overflow-hidden bg-surface border border-line text-left cursor-pointer">
                     <img src="assets/images/about/UC_scholarship.jpg" alt="University of Cambodia Scholarship"
-                        class="h-auto w-full" />
+                        class="h-full w-full object-cover" />
                 </button>
 
             </div>

@@ -98,14 +98,15 @@
         <!-- Projects Section -->
         <section class="max-w-7xl mx-auto px-6 py-14">
             <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">Top Projects</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
                 <!-- Wordle++ Card -->
                 <a href="projects/wordlepp.html"
                     class="group block border border-line rounded-lg overflow-hidden hover:border-muted transition-colors duration-150">
-                    <div class="w-full bg-surface border-b border-line">
+                    <div
+                        class="w-full aspect-video bg-surface border-b border-line overflow-hidden flex items-center justify-center">
                         <img src="assets/images/projects/wordlepp/wordlepp_guest_menu.png" alt="Wordle++ screenshot"
-                            class="w-full h-auto" />
+                            class="w-full h-full object-cover" />
                     </div>
                     <div class="p-4">
                         <h2 class="text-base font-medium mb-2 text-sub group-hover:transition-colors duration-150">
@@ -129,7 +130,7 @@
                     <div
                         class="w-full aspect-video bg-surface border-b border-line overflow-hidden flex items-center justify-center">
                         <img src="assets/images/projects/flip_decibel/flip_decibel_starter_screen.jpg"
-                            alt="Flip Decibel screenshot" class="h-full w-auto max-w-none shrink-0" />
+                            alt="Flip Decibel screenshot" class="w-full h-full object-cover" />
                     </div>
                     <div class="p-4">
                         <h2 class="text-base font-medium mb-2 text-sub group-hover:transition-colors duration-150">
@@ -143,6 +144,30 @@
                             <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">Java</span>
                             <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">Android</span>
                             <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">OpenGL ES 2.0</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- PyDFile Card -->
+                <a href="projects/pydfile.html"
+                    class="group block border border-line rounded-lg overflow-hidden hover:border-muted transition-colors duration-150">
+                    <div
+                        class="w-full aspect-video bg-surface border-b border-line overflow-hidden flex items-center justify-center">
+                        <img src="assets/images/projects/pydfile/pydfile_dark.jpg" alt="PyDFile screenshot"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-base font-medium mb-2 text-sub group-hover:transition-colors duration-150">
+                            PyDFile
+                        </h2>
+                        <p class="text-sm text-sub leading-relaxed mb-3">
+                            Local desktop PDF tool for merging, splitting, organizing, converting, compressing,
+                            protecting, unlocking, and extracting text from PDFs.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">Python</span>
+                            <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">CustomTkinter</span>
+                            <span class="text-[10px] text-muted border border-line rounded-full px-2 py-0.5">PyInstaller</span>
                         </div>
                     </div>
                 </a>
