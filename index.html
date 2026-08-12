@@ -84,19 +84,145 @@
         </div>
     </nav>
 
-    <main class="flex-1">
+    <main class="max-w-7xl mx-auto w-full px-6 flex-1">
         <!-- Hero Section -->
-        <section class="max-w-7xl mx-auto px-6 pt-20 pb-16 border-b border-line">
-            <h1 class="text-4xl sm:text-5xl font-medium leading-snug mb-8">
-                Hor Tongan
-            </h1>
-            <p class="text-base text-sub leading-relaxed max-w-md mb-6">
-                Hello! I am Tongan, a student at The University of Cambodia and ISTAD who builds apps, websites, games, and anything interesting to learn next.
-            </p>
+        <section class="pt-20 pb-16 border-b border-line">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2">
+                    <h1 class="text-4xl sm:text-5xl font-medium leading-snug mb-8">
+                        Hor Tongan
+                    </h1>
+                    <p class="text-base text-sub leading-relaxed max-w-2xl mb-8">
+                        Hello! I am Tongan, a student at The University of Cambodia and ISTAD who builds apps, websites, games, and anything interesting to learn next.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="projects/index.html"
+                            class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                            View projects →
+                        </a>
+                        <a href="assets/Hor_Tongan_CV.pdf" target="_blank" rel="noopener noreferrer"
+                            class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                            Open CV →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4 text-sm">
+                    <div class="flex justify-between gap-6">
+                        <span class="text-muted">Location</span>
+                        <span class="text-sub text-right">Phnom Penh, KH</span>
+                    </div>
+                    <div class="flex justify-between gap-6">
+                        <span class="text-muted">School</span>
+                        <span class="text-sub text-right">UC, ISTAD</span>
+                    </div>
+                    <div class="flex justify-between gap-6">
+                        <span class="text-muted">Focus</span>
+                        <span class="text-sub text-right">Apps, tools, games</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Now Section -->
+        <section class="py-14 border-b border-line">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div>
+                    <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">Now</p>
+                    <p class="text-sm text-sub leading-relaxed">
+                        Building practical software, improving my foundations, and working on small apps, tools, and games.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">Learning</p>
+                    <p class="text-sm text-sub leading-relaxed">
+                        Java, C++, Python, Android development, interface design, and better ways to organize my code.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">Looking For</p>
+                    <p class="text-sm text-sub leading-relaxed">
+                        Developer roles, internships, collaborations, and projects where I can keep learning by building.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Snapshot Section -->
+        <section class="py-14 border-b border-line">
+            <div class="flex items-end justify-between gap-6 mb-6">
+                <p class="text-sm text-primary font-medium uppercase tracking-widest">Snapshots</p>
+                <a href="projects/index.html" class="text-xs text-sub hover:text-primary transition-colors duration-150">
+                    Browse all →
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="projects/wordlepp.html"
+                    class="group block aspect-[4/3] rounded-lg border border-line overflow-hidden bg-surface hover:border-muted transition-colors duration-150">
+                    <img src="assets/images/projects/wordlepp/wordlepp_5_letters.png" alt="Wordle++ 5-letter mode"
+                        class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-200" />
+                </a>
+                <a href="projects/flip_decibel.html"
+                    class="group block aspect-[4/3] rounded-lg border border-line overflow-hidden bg-surface hover:border-muted transition-colors duration-150">
+                    <img src="assets/images/projects/flip_decibel/flip_decibel_heads.jpg" alt="Flip Decibel coin result"
+                        class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-200" />
+                </a>
+                <a href="projects/pydfile.html"
+                    class="group block aspect-[4/3] rounded-lg border border-line overflow-hidden bg-surface hover:border-muted transition-colors duration-150">
+                    <img src="assets/images/projects/pydfile/pydfile_dark.jpg" alt="PyDFile dark mode"
+                        class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-200" />
+                </a>
+                <a href="projects/pydfile.html"
+                    class="group block aspect-[4/3] rounded-lg border border-line overflow-hidden bg-surface hover:border-muted transition-colors duration-150">
+                    <img src="assets/images/projects/pydfile/pydfile_image.jpg" alt="PyDFile image tool"
+                        class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-200" />
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="py-14 border-b border-line">
+            <div class="flex flex-wrap items-end justify-between gap-6 mb-8">
+                <div>
+                    <p class="text-sm text-primary font-medium uppercase tracking-widest mb-4">Technical Skills</p>
+                    <p class="text-sm text-sub leading-relaxed max-w-2xl">
+                        Technologies I use for school, personal projects, and the tools I build while learning.
+                    </p>
+                </div>
+                <a href="about.html" class="text-xs text-sub hover:text-primary transition-colors duration-150">
+                    More about me →
+                </a>
+            </div>
+
+            <div class="space-y-3 text-sm">
+                <div class="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-2">
+                    <span class="text-muted">Programming</span>
+                    <span class="text-sub sm:text-right">C++, Java, Python, JavaScript</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-2">
+                    <span class="text-muted">Web</span>
+                    <span class="text-sub sm:text-right">HTML, CSS, Tailwind CSS</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-2">
+                    <span class="text-muted">Mobile</span>
+                    <span class="text-sub sm:text-right">Android, OpenGL ES 2.0</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-2">
+                    <span class="text-muted">Desktop</span>
+                    <span class="text-sub sm:text-right">CustomTkinter</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-2">
+                    <span class="text-muted">Tools</span>
+                    <span class="text-sub sm:text-right">Git, GitHub, PyInstaller</span>
+                </div>
+            </div>
         </section>
 
         <!-- Projects Section -->
-        <section class="max-w-7xl mx-auto px-6 py-14">
+        <section class="py-14 border-b border-line">
             <p class="text-sm text-primary font-medium uppercase tracking-widest mb-6">Top Projects</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
@@ -177,6 +303,47 @@
                 <a href="projects/index.html" class="text-xs text-sub hover:text-primary transition-colors duration-150">
                     All projects →
                 </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-14">
+            <div class="flex flex-wrap items-end justify-between gap-6 mb-8">
+                <div>
+                    <p class="text-sm text-primary font-medium uppercase tracking-widest mb-4">Contact</p>
+                    <p class="text-sm text-sub leading-relaxed max-w-2xl">
+                        Open to internships, junior developer opportunities, and small collaborations.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://t.me/tonganwashere" target="_blank" rel="noopener noreferrer"
+                        class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                        Telegram →
+                    </a>
+                    <a href="https://facebook.com/TongAnWasHere" target="_blank" rel="noopener noreferrer"
+                        class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                        Facebook →
+                    </a>
+                    <a href="https://github.com/TongAnWasHere" target="_blank" rel="noopener noreferrer"
+                        class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                        GitHub →
+                    </a>
+                    <a href="cv.html"
+                        class="text-xs border border-line rounded px-4 py-2 text-sub hover:text-primary hover:border-muted transition-colors duration-150">
+                        CV →
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-3 text-sm">
+                <div class="flex flex-wrap justify-between gap-3">
+                    <span class="text-muted">Phone</span>
+                    <a href="tel:0965700151" class="text-sub text-right hover:text-primary transition-colors duration-150">0965700151</a>
+                </div>
+                <div class="flex flex-wrap justify-between gap-3">
+                    <span class="text-muted">Email</span>
+                    <a href="mailto:tonganwashere@gmaiil.com" class="text-sub text-right hover:text-primary transition-colors duration-150">tonganwashere@gmaiil.com</a>
+                </div>
             </div>
         </section>
     </main>
